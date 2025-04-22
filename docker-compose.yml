@@ -1,0 +1,15 @@
+services:
+  db:
+    container_name: postgres_db
+    image: postgres
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: jaewoo
+      POSTGRES_PASSWORD: JaeWoo3656!
+      POSTGRES_DB: jwt_postgres_db
+    volumes:
+      - postgres_data:/var/lib/postgres/data
+volumes:
+  postgres_data:
